@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Results summary component</title>
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
@@ -13,37 +15,38 @@
 
 </head>
 <body>
-<div class="result-main-content">
-  <div class="results-summary">
-    <h1>Your Result</h1>
-    <div class="results-highlight">
-      <h2>76</h2>
-      <p>of 100</p>
+  <div class="main-content">
+    <div class="result-main-content">
+      <div class="results-summary">
+        <h1>Your Result</h1>
+        <div class="results-highlight">
+          <h2>76</h2>
+          <p>of 100</p>
+        </div>
+
+        <h3>Great</h3>
+        <p>You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+      
+      <div class="results-details">
+        <h2>Summary</h2>
+        <div class="summary-content">
+            <h3 class="reaction-1">Reaction</h3>
+            <p class="reaction-2"><span>80</span> / 100</p>
+          <h3 class="memory-1">Memory</h3>
+          <p class="memory-2"><span>92</span> / 100</p>
+
+          <h3 class="verbal-1">Verbal</h3>
+          <p class="verbal-2"><span>61</span> / 100</p>
+
+          <h3 class="visual-1">Visual</h3>
+          <p class="visual-2"><span>72</span> / 100</p>
+        </div>
+        <button>Continue</button>
+      </div>
     </div>
-
-    <h3>Great</h3>
-    <p>You scored higher than 65% of the people who have taken these tests.</p>
   </div>
-   
-  <div class="results-details">
-    <h2>Summary</h2>
 
-    <h3>Reaction</h3>
-    <p><span>80</span> / 100</p>
-
-    <h3>Memory</h3>
-    <p><span>92</span> / 100</p>
-
-    <h3>Verbal</h3>
-    <p><span>61</span> / 100</p>
-
-    <h3>Visual</h3>
-    <p><span>72</span> / 100</p>
-
-    <button>Continue</button>
-  </div>
-  
-</div>
  
   
   <div class="attribution">
