@@ -1,3 +1,10 @@
+/**
+* SassQueries
+* Manage media-queries in Sass easily.
+*
+* @author     Samuel Marchal (zessx)
+* @version    0.3
+*/
 :root {
   --Light-royal-blue-background: hsl(241, 81%, 54%);
   --Violet-blue-circle: hsla(256, 72%, 46%, 1);
@@ -16,6 +23,12 @@ body .attribution {
   margin: 100px 0;
   text-align: center;
 }
+@media all and (max-width: 767px) {
+  body .attribution {
+    width: 250px;
+    margin-left: 60px;
+  }
+}
 
 .main-content {
   display: flex;
@@ -23,15 +36,29 @@ body .attribution {
   align-items: center;
   margin-top: 170px;
 }
+@media all and (max-width: 767px) {
+  .main-content {
+    margin-top: 0;
+  }
+}
 .main-content .result-main-content {
   width: 700px;
-  height: 460px;
+  height: 480px;
   display: grid;
   grid-template-columns: 350px 350px;
   background-color: var(--White);
   border-radius: 20px;
   -webkit-box-shadow: 0px 8px 15px 10px var(--Pale-blue);
   box-shadow: 0px 8px 15px 10px var(--Pale-blue);
+}
+@media all and (max-width: 767px) {
+  .main-content .result-main-content {
+    display: block;
+    height: fit-content;
+    width: 420px;
+    grid-template-columns: 0;
+    box-shadow: none;
+  }
 }
 .main-content .result-main-content .results-summary {
   display: flex;
@@ -42,6 +69,11 @@ body .attribution {
   border-radius: 20px;
   padding: 40px;
   color: var(--White);
+}
+@media all and (max-width: 767px) {
+  .main-content .result-main-content .results-summary {
+    border-radius: 0 0 30px 30px;
+  }
 }
 .main-content .result-main-content .results-summary h1 {
   font-size: 25px;
@@ -60,23 +92,39 @@ body .attribution {
 .main-content .result-main-content .results-summary .results-highlight {
   margin: 32px 0;
   border-radius: 100%;
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   background: linear-gradient(var(--Violet-blue-circle), var(--Persian-blue-circle));
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+@media all and (max-width: 767px) {
+  .main-content .result-main-content .results-summary .results-highlight {
+    width: 170px;
+    height: 170px;
+  }
+}
 .main-content .result-main-content .results-summary .results-highlight h2 {
   color: var(--White);
-  font-size: 50px;
+  font-size: 80px;
   font-weight: 700;
   margin-bottom: 10px;
+}
+@media all and (max-width: 767px) {
+  .main-content .result-main-content .results-summary .results-highlight h2 {
+    font-size: 70px;
+  }
 }
 .main-content .result-main-content .results-summary .results-highlight p {
   color: var(--White);
   opacity: 0.4;
-  font-size: 12px;
+  font-size: 16px;
+}
+@media all and (max-width: 767px) {
+  .main-content .result-main-content .results-summary .results-highlight p {
+    font-size: 15px;
+  }
 }
 .main-content .result-main-content .results-details {
   padding: 40px;
@@ -90,7 +138,7 @@ body .attribution {
 .main-content .result-main-content .results-details button {
   margin-top: 40px;
   font-size: 18px;
-  width: 250px;
+  width: 280px;
   height: 45px;
   background-color: var(--Dark-gray-blue);
   color: var(--White);
@@ -99,13 +147,18 @@ body .attribution {
   border: none;
   border-radius: 30px;
 }
+@media all and (max-width: 767px) {
+  .main-content .result-main-content .results-details button {
+    width: 280px;
+  }
+}
 .main-content .result-main-content .results-details button:hover {
   background-color: var(--Light-royal-blue-background);
   cursor: pointer;
 }
 .main-content .result-main-content .results-details .summary-content {
   display: grid;
-  grid-template-columns: 120px 120px;
+  grid-template-columns: 140px 140px;
   row-gap: 15px;
 }
 .main-content .result-main-content .results-details .summary-content span {
@@ -114,13 +167,22 @@ body .attribution {
 }
 .main-content .result-main-content .results-details .summary-content p {
   color: var(--Dark-gray-blue);
+  text-align: end;
+}
+@media all and (max-width: 767px) {
+  .main-content .result-main-content .results-details .summary-content p {
+    text-align: end;
+  }
+}
+.main-content .result-main-content .results-details .summary-content img {
+  margin-right: 10px;
 }
 .main-content .result-main-content .results-details .summary-content .reaction-1 {
   background-color: rgba(255, 0, 0, 0.082);
   border-radius: 12px 0 0 12px;
   padding: 15px;
   font-weight: 700;
-  color: rgb(228, 2, 2);
+  color: rgba(228, 2, 2, 0.626);
 }
 .main-content .result-main-content .results-details .summary-content .reaction-2 {
   background-color: rgba(255, 0, 0, 0.082);
@@ -132,7 +194,7 @@ body .attribution {
   border-radius: 12px 0 0 12px;
   padding: 15px;
   font-weight: 700;
-  color: rgb(228, 175, 2);
+  color: rgba(228, 175, 2, 0.626);
 }
 .main-content .result-main-content .results-details .summary-content .memory-2 {
   background-color: rgba(255, 234, 0, 0.082);
@@ -144,7 +206,7 @@ body .attribution {
   border-radius: 12px 0 0 12px;
   padding: 15px;
   font-weight: 700;
-  color: rgb(13, 153, 0);
+  color: rgba(13, 153, 0, 0.626);
 }
 .main-content .result-main-content .results-details .summary-content .verbal-2 {
   background-color: rgba(17, 255, 0, 0.082);
@@ -156,7 +218,7 @@ body .attribution {
   border-radius: 12px 0 0 12px;
   padding: 15px;
   font-weight: 700;
-  color: rgb(2, 59, 228);
+  color: rgba(2, 59, 228, 0.626);
 }
 .main-content .result-main-content .results-details .summary-content .visual-2 {
   background-color: rgba(4, 0, 255, 0.082);

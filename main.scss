@@ -1,3 +1,5 @@
+@import 'sass-queries';
+
 :root {
     --Light-royal-blue-background: hsl(241, 81%, 54%);
     --Violet-blue-circle: hsla(256, 72%, 46%, 1);
@@ -13,7 +15,11 @@ body {
     font-size: 18px;
     .attribution {
         margin: 100px 0;
-        text-align: center
+        text-align: center;
+        @include media($until: tablet) {
+            width: 250px;
+            margin-left: 60px
+        }
     }
 }
 @import 'results';
